@@ -53,6 +53,10 @@ function convertCurrency(amount, price, symol) {
         description.textContent = `${symol} 1 = ${formatCurrencyBRL(price)}`
 
         let value = amount * price
+
+        if(isNaN(value)){
+            alert('Digite um valor corretamente para converter.')
+        }
         result.textContent = `${formatCurrencyBRL(value)} Reais`
         
     } catch (error) {
