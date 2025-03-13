@@ -54,6 +54,7 @@ function convertCurrency(amount, price, symol) {
 
         let value = amount * price
 
+        // verifica se o result é um numero 
         if(isNaN(value)){
             alert('Digite um valor corretamente para converter.')
         }
