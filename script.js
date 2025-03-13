@@ -6,5 +6,8 @@ const inputElement = document.querySelector('#amount')
 
 // Manipulando o input para receber somente numeros
 inputElement.addEventListener("input", () => {
-    console.log(inputElement.value)
+    const regexInput = /\D+/g
+    inputElement.value = inputElement.value.replace(regexInput, "")
+
 })
+
