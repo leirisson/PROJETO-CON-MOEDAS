@@ -1,7 +1,7 @@
 //SELECIOANDO ELEMENTOS HTML
 const selectElement = document.querySelector('#currency')
 const inputElement = document.querySelector('#amount')
-
+const form = document.querySelector("form")
 
 
 // Manipulando o input para receber somente numeros
@@ -11,3 +11,10 @@ inputElement.addEventListener("input", () => {
 
 })
 
+
+// capturando o evento de submit do formulario
+form.addEventListener("submit", (e) => {
+    e.preventDefault()
+
+    console.log(selectElement.value)
+})
